@@ -1,69 +1,68 @@
-# Welcome to your Lovable project
+# Xtrayt - AI-Powered Digital Toolkit for YouTubers 🎥🚀
 
-## Project info
+**Xtrayt** is an AI-powered digital platform designed to help YouTube content creators optimize their workflow by providing essential tools for content generation, SEO improvement, and creative assistance. The platform offers a range of AI-driven features to enhance video production, engagement, and content visibility.
 
-**URL**: https://lovable.dev/projects/08a0f81a-d2a9-43b2-a9fe-843c6cc7afa1
+## 🛠 **Tech Stack**
 
-## How can I edit this code?
+- **Frontend**: React.js + TypeScript
+- **Styling**: Tailwind CSS & ShadcN
+- **Backend**: Node.js
 
-There are several ways of editing your application.
+## 🌟 **Features & Functionalities**
 
-**Use Lovable**
+### ✅ **Thumbnail Downloader**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/08a0f81a-d2a9-43b2-a9fe-843c6cc7afa1) and start prompting.
+- Download high-quality thumbnails from any YouTube video.
+- Extract and save thumbnails in their original resolution.
+- Useful for inspiration, analysis, and reusability.
 
-Changes made via Lovable will be committed automatically to this repo.
+### 📝 **Transcript Downloader** _(Coming Soon)_
 
-**Use your preferred IDE**
+- Extract and download YouTube video transcripts.
+- Useful for content repurposing, accessibility, and SEO optimization.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 👀 **Thumbnail Preview**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Preview how thumbnails appear in different YouTube contexts.
+- Optimize thumbnails for maximum engagement and visibility.
 
-Follow these steps:
+### 🔍 **YouTube Tags Extractor**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Extract SEO-friendly tags from any YouTube video.
+- Enhance discoverability and improve ranking in search results.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 💡 **Thumbnail Idea Generator** _(Coming Soon)_
 
-# Step 3: Install the necessary dependencies.
-npm i
+- AI-powered tool that generates unique and engaging thumbnail ideas.
+- Helps creators with design inspiration and audience targeting.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### 📝 **Script Generator** _(Coming Soon)_
 
-**Edit a file directly in GitHub**
+- AI-generated scripts tailored for YouTube videos.
+- Saves time and helps in structuring engaging video content.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🎨 **Thumbnail Generator** _(Future Update)_
 
-**Use GitHub Codespaces**
+- Create professional-quality thumbnails with AI-powered design suggestions.
+- Customization options for fonts, colors, and overlays.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### 📜 **Video Summarizer** _(Future Update)_
 
-## What technologies are used for this project?
+- AI-driven summary of YouTube videos for quick insights.
+- Useful for research, note-taking, and content repurposing.
 
-This project is built with .
+## 🚀 **Why Use Xtrayt?**
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **AI-Powered**: Automates and enhances video creation workflows.
+- **SEO-Friendly**: Optimizes YouTube content for better reach.
+- **Time-Saving**: Reduces manual work with intelligent automation.
+- **User-Friendly**: Simple, intuitive interface for all creators.
+- **Modern Tech**: Built using React.js and TypeScript for a seamless experience.
 
-## How can I deploy this project?
+## 🔗 **Try Xtrayt Now!**
 
-Simply open [Lovable](https://lovable.dev/projects/08a0f81a-d2a9-43b2-a9fe-843c6cc7afa1) and click on Share -> Publish.
+👉 [Visit Xtrayt](https://xtrayt.vercel.app)
 
-## I want to use a custom domain - is that possible?
+---
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+📢 _Stay tuned for upcoming features and AI-powered enhancements!_
