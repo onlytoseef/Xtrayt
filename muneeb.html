@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muneeb Ahmad | Graphic Designer</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Global Styles */
+      :root {
+        --primary: #0f0f0f;
+        --secondary: #1a1a1a;
+        --accent: #00f0ff;
+        --accent-dark: #008c96;
+        --text: #ffffff;
+        --text-secondary: #cccccc;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: var(--primary);
+        color: var(--text);
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      section {
+        padding: 100px 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        background: linear-gradient(90deg, #00f0ff, #008c96);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+      }
+
+      h2 {
+        font-size: 2.8rem;
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: var(--accent);
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      p {
+        color: var(--text-secondary);
+        line-height: 1.8;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 35px;
+        background: transparent;
+        color: var(--accent);
+        border: 2px solid var(--accent);
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: var(--accent);
+        z-index: -1;
+        transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      .btn:hover {
+        color: var(--primary);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 240, 255, 0.3);
+      }
+
+      .btn:hover::before {
+        width: 100%;
+      }
+
+      .btn-accent {
+        background: var(--accent);
+        color: var(--primary);
+      }
+
+      .btn-accent:hover {
+        background: transparent;
+        color: var(--accent);
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 80px;
+      }
+
+      .section-title h2 {
+        display: inline-block;
+      }
+
+      /* Header & Navigation */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 25px 0;
+        z-index: 1000;
+        transition: all 0.4s ease;
+      }
+
+      header.scrolled {
+        background: rgba(15, 15, 15, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 15px 0;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo span {
+        color: var(--accent);
+        margin-left: 5px;
+      }
+
+      .logo-icon {
+        font-size: 1.8rem;
+        color: var(--accent);
+        margin-right: 10px;
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .nav-links li {
+        margin-left: 40px;
+      }
+
+      .nav-links a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        z-index: 1001;
+      }
+
+      .hamburger div {
+        width: 30px;
+        height: 3px;
+        background: var(--text);
+        margin: 6px;
+        transition: all 0.3s ease;
+      }
+
+      /* Hero Section */
+      #hero {
+        height: 100vh;
+        min-height: 800px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        max-width: 700px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-content h1 {
+        font-size: 4rem;
+        margin-bottom: 30px;
+        animation: fadeInUp 1s ease;
+      }
+
+      .hero-content h3 {
+        font-size: 2rem;
+        color: var(--accent);
+        margin-bottom: 30px;
+        animation: fadeInUp 1s ease 0.2s forwards;
+        opacity: 0;
+      }
+
+      .hero-content p {
+        font-size: 1.3rem;
+        margin-bottom: 40px;
+        animation: fadeInUp 1s ease 0.4s forwards;
+        opacity: 0;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 20px;
+        animation: fadeInUp 1s ease 0.6s forwards;
+        opacity: 0;
+      }
+
+      .hero-image {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 35%;
+        max-width: 500px;
+        animation: float 8s ease-in-out infinite;
+        z-index: 1;
+        opacity: 0;
+        animation: fadeInRight 1s ease 0.8s forwards,
+          float 8s ease-in-out infinite 1.8s;
+      }
+
+      .hero-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-social {
+        position: absolute;
+        left: 50px;
+        bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 2;
+        animation: fadeInLeft 1s ease 1s forwards;
+        opacity: 0;
+      }
+
+      .hero-social a {
+        color: var(--text);
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .hero-social a:hover {
+        color: var(--accent);
+        transform: translateY(-5px);
+      }
+
+      .hero-scroll {
+        position: absolute;
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+        animation: fadeIn 1s ease 1.2s forwards;
+        opacity: 0;
+      }
+
+      .hero-scroll span {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .hero-scroll-icon {
+        width: 40px;
+        height: 60px;
+        border: 2px solid var(--text-secondary);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+      }
+
+      .hero-scroll-icon::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--accent);
+        border-radius: 50%;
+        animation: scrollDown 2s infinite;
+      }
+
+      /* About Section */
+      #about {
+        background: var(--secondary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-container {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .about-img {
+        width: 40%;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        animation: fadeInLeft 1s ease;
+      }
+
+      .about-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .about-img:hover img {
+        transform: scale(1.05);
+      }
+
+      .about-content {
+        width: 60%;
+        animation: fadeInRight 1s ease;
+      }
+
+      .about-content h3 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: var(--accent);
+      }
+
+      .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 40px;
+      }
+
+      .skill {
+        background: rgba(0, 240, 255, 0.1);
+        color: var(--accent);
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 500;
+        border: 1px solid rgba(0, 240, 255, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .skill:hover {
+        background: var(--accent);
+        color: var(--primary);
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+      }
+
+      /* Trusted Client Section */
+      .client-section {
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .client-card {
+        background: var(--secondary);
+        padding: 40px;
+        border-radius: 15px;
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .client-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .client-photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 20px;
+        border: 3px solid var(--accent);
+      }
+
+      .client-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .client-details h4 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+      }
+
+      .client-details p {
+        color: var(--accent);
+        margin-bottom: 0;
+      }
+
+      .client-rating {
+        color: gold;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .client-quote {
+        font-style: italic;
+        font-size: 1.2rem;
+        position: relative;
+      }
+
+      .client-quote::before,
+      .client-quote::after {
+        content: '"';
+        color: var(--accent);
+        font-size: 1.5rem;
+      }
+
+      .client-channel {
+        margin-top: 20px;
+      }
+
+      .client-channel a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .client-channel a:hover {
+        text-decoration: underline;
+      }
+
+      /* Portfolio Section */
+      #portfolio {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .portfolio-filter {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .filter-btn {
+        padding: 12px 30px;
+        background: transparent;
+        color: var(--text);
+        border: 1px solid var(--text-secondary);
+        border-radius: 50px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: var(--accent);
+        color: var(--primary);
+        border-color: var(--accent);
+        box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+        transform: translateY(-3px);
+      }
+
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 30px;
+      }
+
+      .portfolio-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s ease;
+      }
+
+      .portfolio-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 240, 255, 0.3);
+      }
+
+      .portfolio-img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .portfolio-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: all 0.4s ease;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .portfolio-item:hover .portfolio-overlay {
+        opacity: 1;
+      }
+
+      .portfolio-overlay h3 {
+        color: var(--accent);
+        margin-bottom: 10px;
+        transform: translateY(20px);
+        transition: all 0.3s ease 0.1s;
+      }
+
+      .portfolio-overlay p {
+        color: var(--text);
+        transform: translateY(20px);
+        transition: all 0.3s ease 0.2s;
+        margin-bottom: 20px;
+      }
+
+      .portfolio-item:hover .portfolio-overlay h3,
+      .portfolio-item:hover .portfolio-overlay p {
+        transform: translateY(0);
+      }
+
+      /* Services Section */
+      #services {
+        background: var(--secondary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 40px;
+      }
+
+      .service-card {
+        background: var(--primary);
+        padding: 40px 30px;
+        border-radius: 15px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        z-index: 2;
+      }
+
+      .service-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: var(--accent);
+        transition: all 0.4s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 50px rgba(0, 240, 255, 0.2);
+      }
+
+      .service-card:hover::before {
+        height: 100%;
+        opacity: 0.1;
+      }
+
+      .service-icon {
+        font-size: 3.5rem;
+        color: var(--accent);
+        margin-bottom: 25px;
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover .service-icon {
+        transform: rotate(15deg) scale(1.1);
+      }
+
+      .service-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        position: relative;
+        display: inline-block;
+      }
+
+      .service-card h3::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 3px;
+        background: var(--accent);
+        transition: all 0.3s ease;
+      }
+
+      .service-card:hover h3::after {
+        width: 80px;
+      }
+
+      /* Contact Section */
+      #contact {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-container {
+        display: flex;
+        gap: 80px;
+      }
+
+      .contact-info {
+        width: 40%;
+        animation: fadeInLeft 1s ease;
+      }
+
+      .contact-info h3 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: var(--accent);
+      }
+
+      .contact-details {
+        margin-bottom: 40px;
+      }
+
+      .contact-detail {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+      }
+
+      .contact-detail i {
+        width: 60px;
+        height: 60px;
+        background: var(--accent);
+        color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+        transition: all 0.3s ease;
+      }
+
+      .contact-detail:hover i {
+        transform: rotate(15deg) scale(1.1);
+        box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+      }
+
+      .contact-detail-content h4 {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      .contact-detail-content p {
+        margin-bottom: 0;
+        color: var(--text-secondary);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .social-link {
+        width: 50px;
+        height: 50px;
+        background: var(--secondary);
+        color: var(--text);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        transition: all 0.4s ease;
+      }
+
+      .social-link:hover {
+        background: var(--accent);
+        color: var(--primary);
+        transform: translateY(-5px) rotate(10deg);
+        box-shadow: 0 10px 20px rgba(0, 240, 255, 0.3);
+      }
+
+      .contact-form {
+        width: 60%;
+        background: var(--secondary);
+        padding: 50px;
+        border-radius: 15px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        animation: fadeInRight 1s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-form::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background: var(--accent);
+        transition: all 0.4s ease;
+      }
+
+      .contact-form:hover::before {
+        width: 100%;
+        opacity: 0.05;
+      }
+
+      .form-group {
+        margin-bottom: 25px;
+        position: relative;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 15px 20px;
+        background: var(--primary);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: var(--text);
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .form-control:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(0, 240, 255, 0.2);
+        outline: none;
+      }
+
+      textarea.form-control {
+        min-height: 180px;
+        resize: vertical;
+      }
+
+      .form-label {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        color: var(--text-secondary);
+        transition: all 0.3s ease;
+        pointer-events: none;
+      }
+
+      .form-control:focus + .form-label,
+      .form-control:not(:placeholder-shown) + .form-label {
+        top: -10px;
+        left: 15px;
+        background: var(--primary);
+        padding: 0 5px;
+        font-size: 0.8rem;
+        color: var(--accent);
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 15px;
+        background: var(--accent);
+        color: var(--primary);
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .submit-btn:hover {
+        background: transparent;
+        color: var(--accent);
+        box-shadow: 0 0 0 2px var(--accent);
+      }
+
+      /* Footer */
+      footer {
+        background: var(--primary);
+        padding: 80px 0 30px;
+        position: relative;
+      }
+
+      .footer-content {
+        text-align: center;
+      }
+
+      .footer-logo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text);
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 30px;
+      }
+
+      .footer-logo span {
+        color: var(--accent);
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .footer-links li {
+        position: relative;
+      }
+
+      .footer-links li::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -15px;
+        transform: translateY(-50%);
+        width: 5px;
+        height: 5px;
+        background: var(--accent);
+        border-radius: 50%;
+      }
+
+      .footer-links li:last-child::after {
+        display: none;
+      }
+
+      .footer-links a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent);
+      }
+
+      .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .footer-social-link {
+        width: 50px;
+        height: 50px;
+        background: var(--secondary);
+        color: var(--text);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        transition: all 0.3s ease;
+      }
+
+      .footer-social-link:hover {
+        background: var(--accent);
+        color: var(--primary);
+        transform: translateY(-5px);
+      }
+
+      .copyright {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+      }
+
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--accent);
+        color: var(--primary);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999;
+      }
+
+      .back-to-top.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(-50%) translateX(0);
+        }
+        50% {
+          transform: translateY(-50%) translateX(-20px);
+        }
+        100% {
+          transform: translateY(-50%) translateX(0);
+        }
+      }
+
+      @keyframes scrollDown {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(15px);
+          opacity: 0.5;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 1200px) {
+        h1 {
+          font-size: 3.5rem;
+        }
+
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+      }
+
+      @media (max-width: 992px) {
+        h1 {
+          font-size: 3rem;
+        }
+
+        h2 {
+          font-size: 2.2rem;
+        }
+
+        .about-container,
+        .contact-container {
+          flex-direction: column;
+          gap: 50px;
+        }
+
+        .about-img,
+        .about-content,
+        .contact-info,
+        .contact-form {
+          width: 100%;
+        }
+
+        .hero-image {
+          display: none;
+        }
+
+        .hero-content {
+          max-width: 100%;
+          text-align: center;
+          padding-top: 100px;
+        }
+
+        .hero-btns {
+          justify-content: center;
+        }
+
+        .hero-social {
+          left: 30px;
+          bottom: 30px;
+          flex-direction: row;
+          gap: 15px;
+        }
+
+        .services-grid {
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+          gap: 30px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 80%;
+          height: 100vh;
+          background: var(--secondary);
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.5s ease;
+          z-index: 1000;
+          box-shadow: -5px 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-links.active {
+          right: 0;
+        }
+
+        .nav-links li {
+          margin: 20px 0;
+        }
+
+        .nav-links a {
+          font-size: 1.3rem;
+        }
+
+        .hamburger {
+          display: block;
+        }
+
+        .hamburger.active div:nth-child(1) {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active div:nth-child(2) {
+          opacity: 0;
+        }
+
+        .hamburger.active div:nth-child(3) {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        section {
+          padding: 80px 0;
+        }
+
+        .portfolio-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-form {
+          padding: 30px;
+        }
+
+        .footer-links {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .footer-links li::after {
+          display: none;
+        }
+      }
+
+      @media (max-width: 576px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        .hero-content h1 {
+          font-size: 3rem;
+        }
+
+        .hero-content h3 {
+          font-size: 1.5rem;
+        }
+
+        .hero-content p {
+          font-size: 1.1rem;
+        }
+
+        .hero-btns {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .btn {
+          width: 100%;
+          text-align: center;
+        }
+
+        .about-img {
+          width: 100%;
+        }
+
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-form {
+          padding: 20px;
+        }
+
+        .footer-logo {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <a href="#" class="logo">
+          <i class="fas fa-pen-nib logo-icon"></i>
+          Muneeb<span>.</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Muneeb Ahmad</h1>
+          <h3>Creative Graphic Designer</h3>
+          <p>
+            "Transforming Ideas into Stunning Visuals with precision and
+            creativity. Specializing in thumbnails and social media designs that
+            captivate and engage."
+          </p>
+          <div class="hero-btns">
+            <a href="#portfolio" class="btn btn-accent">View My Work</a>
+            <a href="#contact" class="btn">Hire Me</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://i.imgur.com/gUkF7u4.jpg" alt="Muneeb Ahmad" />
+        </div>
+      </div>
+
+      <div class="hero-social">
+        <a href="https://www.facebook.com/muhammadmuneeb113" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+        <a href="https://www.instagram.com/muhammad_muneeb1/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/m-muneeb-761970322/"
+          target="_blank"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll Down</span>
+        <div class="hero-scroll-icon"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <h2>About Me</h2>
+        </div>
+        <div class="about-container">
+          <div class="about-img">
+            <img src="https://i.imgur.com/gUkF7u4.jpg" alt="Muneeb Ahmad" />
+          </div>
+          <div class="about-content">
+            <h3>Professional Graphic Designer</h3>
+            <p>
+              I am Muneeb, a passionate and creative graphic designer with a
+              strong eye for aesthetics and detail. With experience in designing
+              thumbnails, social media posts, and branding materials, I strive
+              to create visually compelling designs that leave a lasting impact.
+            </p>
+            <p>
+              I have a deep understanding of modern design trends and AI-powered
+              tools, allowing me to produce innovative and high-quality work
+              efficiently. As the founder of Nova Creators, I lead a team of
+              designers, ensuring professional and engaging designs. My goal is
+              to deliver unique and effective visual solutions that align with
+              clients' visions and business objectives.
+            </p>
+            <div class="skills">
+              <span class="skill">Thumbnail Design</span>
+              <span class="skill">Social Media Design</span>
+              <span class="skill">Creative Design</span>
+              <span class="skill">Adobe Photoshop</span>
+              <span class="skill">Adobe Illustrator</span>
+              <span class="skill">AI Tools</span>
+              <span class="skill">Brand Identity</span>
+              <span class="skill">Visual Storytelling</span>
+            </div>
+            <a href="#contact" class="btn" style="margin-top: 30px"
+              >Let's Collaborate</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trusted Client Section -->
+    <section class="client-section">
+      <div class="container">
+        <div class="client-card">
+          <div class="client-info">
+            <div class="client-photo">
+              <img src="https://i.imgur.com/BPrRkHA.jpg" alt="Haroon Awan" />
+            </div>
+            <div class="client-details">
+              <h4>Haroon Awan</h4>
+              <p>YouTube Creator</p>
+            </div>
+          </div>
+          <div class="client-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+            <span>4.90</span>
+          </div>
+          <p class="client-quote">
+            Muneeb's creativity and attention to detail make his designs stand
+            out effortlessly
+          </p>
+          <div class="client-channel">
+            <a href="https://www.youtube.com/@HAROONAWAN05" target="_blank"
+              >@HAROONAWAN05</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="section-title">
+          <h2>My Portfolio</h2>
+        </div>
+        <div class="portfolio-filter">
+          <button class="filter-btn active" data-filter="all">All Work</button>
+          <button class="filter-btn" data-filter="thumbnail">Thumbnails</button>
+          <button class="filter-btn" data-filter="social">Social Media</button>
+          <button class="filter-btn" data-filter="creative">
+            Creative Designs
+          </button>
+        </div>
+        <div class="portfolio-grid">
+          <!-- Thumbnail Designs -->
+          <div class="portfolio-item" data-category="thumbnail">
+            <img
+              src="https://i.imgur.com/Qj09l70.jpg"
+              alt="Thumbnail Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>YouTube Thumbnail</h3>
+              <p>
+                High-converting thumbnail designed to maximize click-through
+                rate
+              </p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="thumbnail">
+            <img
+              src="https://i.imgur.com/Ii6ATu0.jpg"
+              alt="Thumbnail Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Gaming Thumbnail</h3>
+              <p>Eye-catching design for gaming content creators</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="thumbnail">
+            <img
+              src="https://i.imgur.com/WNO1z9h.jpg"
+              alt="Thumbnail Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Tutorial Thumbnail</h3>
+              <p>Clean and informative design for educational content</p>
+            </div>
+          </div>
+
+          <!-- Social Media Designs -->
+          <div class="portfolio-item" data-category="social">
+            <img
+              src="https://i.imgur.com/T8vEjYN.jpg"
+              alt="Social Media Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Instagram Post</h3>
+              <p>Engaging social media content for brand promotion</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="social">
+            <img
+              src="https://i.imgur.com/TN3ko3r.jpg"
+              alt="Social Media Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Facebook Ad</h3>
+              <p>Professional ad design for marketing campaigns</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="social">
+            <img
+              src="https://i.imgur.com/HqUzdn2.jpg"
+              alt="Social Media Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Promotional Post</h3>
+              <p>Vibrant design to highlight special offers</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="social">
+            <img
+              src="https://i.imgur.com/5GFmnZ9.jpg"
+              alt="Social Media Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Quote Graphic</h3>
+              <p>Inspirational content for social engagement</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="social">
+            <img
+              src="https://i.imgur.com/9dTBb91.jpg"
+              alt="Social Media Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Event Promotion</h3>
+              <p>Attention-grabbing design for upcoming events</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="social">
+            <img
+              src="https://i.imgur.com/WAC0C9v.jpg"
+              alt="Social Media Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Product Showcase</h3>
+              <p>Professional presentation for e-commerce</p>
+            </div>
+          </div>
+
+          <!-- Creative Designs -->
+          <div class="portfolio-item" data-category="creative">
+            <img
+              src="https://i.imgur.com/EFXsha4.jpg"
+              alt="Creative Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Abstract Art</h3>
+              <p>Experimental design exploring color and form</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="creative">
+            <img
+              src="https://i.imgur.com/fbAScGM.jpg"
+              alt="Creative Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Typography Design</h3>
+              <p>Creative use of letterforms in composition</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="creative">
+            <img
+              src="https://i.imgur.com/jSITOEM.jpg"
+              alt="Creative Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Digital Illustration</h3>
+              <p>Handcrafted digital artwork</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="creative">
+            <img
+              src="https://i.imgur.com/8HpxYJo.jpg"
+              alt="Creative Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Concept Art</h3>
+              <p>Imaginative design exploration</p>
+            </div>
+          </div>
+
+          <div class="portfolio-item" data-category="creative">
+            <img
+              src="https://i.imgur.com/GqVSSV1.jpg"
+              alt="Creative Design"
+              class="portfolio-img"
+            />
+            <div class="portfolio-overlay">
+              <h3>Minimalist Design</h3>
+              <p>Clean and sophisticated composition</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>My Services</h2>
+        </div>
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-play-circle"></i>
+            </div>
+            <h3>Thumbnail Designing</h3>
+            <p>
+              High-converting, eye-catching thumbnails designed to boost your
+              click-through rates and video performance. Custom designs tailored
+              to your brand and content style.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-share-alt"></i>
+            </div>
+            <h3>Social Media Post Design</h3>
+            <p>
+              Engaging posts, stories, and ads for Instagram, Facebook, and
+              other platforms. Designs that stop the scroll and drive
+              engagement.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3>Creative Design</h3>
+            <p>
+              Unique and innovative designs for special projects, digital art,
+              and creative explorations outside standard formats.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Let's Work Together!</h3>
+            <p>
+              Have a project in mind or want to discuss potential collaboration?
+              Feel free to reach out through any of these channels:
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <i class="fas fa-phone"></i>
+                <div class="contact-detail-content">
+                  <h4>Phone</h4>
+                  <p>+92 327 7250607</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <div class="contact-detail-content">
+                  <h4>Email</h4>
+                  <p>muneebgfx1@gmail.com</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="contact-detail-content">
+                  <h4>Location</h4>
+                  <p>Available for remote work worldwide</p>
+                </div>
+              </div>
+            </div>
+
+            <h3>Follow My Work</h3>
+            <div class="social-links">
+              <a
+                href="https://www.facebook.com/muhammadmuneeb113"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/muhammad_muneeb1/"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/m-muneeb-761970322/"
+                class="social-link"
+                target="_blank"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form
+              id="form"
+              action="https://formspree.io/f/muneebgfx1@gmail.com"
+              method="POST"
+            >
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder=" "
+                  required
+                />
+                <label for="name" class="form-label">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder=" "
+                  required
+                />
+                <label for="email" class="form-label">Your Email</label>
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="subject"
+                  name="subject"
+                  placeholder=" "
+                />
+                <label for="subject" class="form-label">Subject</label>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  placeholder=" "
+                  required
+                ></textarea>
+                <label for="message" class="form-label">Your Message</label>
+              </div>
+              <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <a href="#" class="footer-logo">Muneeb<span>.</span></a>
+          <p>Transforming Ideas into Stunning Visuals</p>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="footer-social">
+            <a
+              href="https://www.facebook.com/muhammadmuneeb113"
+              class="footer-social-link"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/muhammad_muneeb1/"
+              class="footer-social-link"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/m-muneeb-761970322/"
+              class="footer-social-link"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <p class="copyright">© 2023 Muneeb Ahmad. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile Navigation
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      const navLinksItems = document.querySelectorAll(".nav-links li");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking a link
+      navLinksItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
+        });
+      });
+
+      // Header scroll effect
+      window.addEventListener("scroll", () => {
+        const header = document.getElementById("header");
+        header.classList.toggle("scrolled", window.scrollY > 0);
+      });
+
+      // Portfolio filter
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Remove active class from all buttons
+          filterBtns.forEach((btn) => btn.classList.remove("active"));
+          // Add active class to clicked button
+          btn.classList.add("active");
+
+          const filter = btn.getAttribute("data-filter");
+
+          portfolioItems.forEach((item) => {
+            if (
+              filter === "all" ||
+              item.getAttribute("data-category") === filter
+            ) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // Back to top button
+      const backToTopBtn = document.querySelector(".back-to-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopBtn.classList.add("active");
+        } else {
+          backToTopBtn.classList.remove("active");
+        }
+      });
+
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Form submission
+      const form = document.getElementById("form");
+      const formSubmitMessage = document.createElement("div");
+      formSubmitMessage.style.display = "none";
+      formSubmitMessage.style.padding = "15px";
+      formSubmitMessage.style.marginTop = "20px";
+      formSubmitMessage.style.borderRadius = "8px";
+      formSubmitMessage.style.textAlign = "center";
+      form.appendChild(formSubmitMessage);
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+
+        // Change button to loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML =
+          '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            formSubmitMessage.textContent =
+              "Thank you for your message! I will get back to you soon.";
+            formSubmitMessage.style.backgroundColor = "rgba(0, 240, 255, 0.1)";
+            formSubmitMessage.style.color = "var(--accent)";
+            formSubmitMessage.style.display = "block";
+            form.reset();
+
+            // Reset form labels
+            document.querySelectorAll(".form-label").forEach((label) => {
+              label.style.top = "15px";
+              label.style.left = "20px";
+              label.style.fontSize = "1rem";
+              label.style.background = "transparent";
+              label.style.padding = "0";
+            });
+          } else {
+            throw new Error("Form submission failed");
+          }
+        } catch (error) {
+          formSubmitMessage.textContent =
+            "Oops! Something went wrong. Please try again later or contact me directly at muneebgfx1@gmail.com";
+          formSubmitMessage.style.backgroundColor = "rgba(255, 0, 0, 0.1)";
+          formSubmitMessage.style.color = "#ff6b6b";
+          formSubmitMessage.style.display = "block";
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+
+          // Hide message after 5 seconds
+          setTimeout(() => {
+            formSubmitMessage.style.display = "none";
+          }, 5000);
+        }
+      });
+
+      // Form label animation
+      document.querySelectorAll(".form-control").forEach((input) => {
+        input.addEventListener("focus", function () {
+          const label = this.nextElementSibling;
+          if (label && label.classList.contains("form-label")) {
+            label.style.top = "-10px";
+            label.style.left = "15px";
+            label.style.background = "var(--primary)";
+            label.style.padding = "0 5px";
+            label.style.fontSize = "0.8rem";
+            label.style.color = "var(--accent)";
+          }
+        });
+
+        // Handle case when input has value but loses focus
+        input.addEventListener("blur", function () {
+          if (this.value === "") {
+            const label = this.nextElementSibling;
+            if (label && label.classList.contains("form-label")) {
+              label.style.top = "15px";
+              label.style.left = "20px";
+              label.style.fontSize = "1rem";
+              label.style.background = "transparent";
+              label.style.padding = "0";
+              label.style.color = "var(--text-secondary)";
+            }
+          }
+        });
+
+        // Initialize labels if input has value on page load
+        if (input.value !== "") {
+          const label = input.nextElementSibling;
+          if (label && label.classList.contains("form-label")) {
+            label.style.top = "-10px";
+            label.style.left = "15px";
+            label.style.background = "var(--primary)";
+            label.style.padding = "0 5px";
+            label.style.fontSize = "0.8rem";
+            label.style.color = "var(--accent)";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
